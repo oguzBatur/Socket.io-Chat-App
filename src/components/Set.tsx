@@ -19,7 +19,8 @@ export default function Set({extractName}:SetProps) {
         setName(e.target.value);
         setErr('');
     }
-    const sendInformation = async() => {
+    const sendInformation = async(e:any) => { 
+        e.preventDefault();
         extractName(name);
         if(name.replace(/\s/g,'') !== ""){
 
@@ -36,7 +37,7 @@ export default function Set({extractName}:SetProps) {
                 await setCookie('token',data.token);
                 if(cookies.token)
                 {
-                    await navigate('/chat')
+                    await navigate('/Socket.io-Chat-App/chat')
                 }
             }
             else{
@@ -49,7 +50,7 @@ export default function Set({extractName}:SetProps) {
         }
     }
     const handleKeyDown = (e:React.KeyboardEvent) => {
-        if(e.key === 'Enter') sendInformation();
+        if(e.key === 'Enter') sendInformation(e);
     }
     return (
         <>

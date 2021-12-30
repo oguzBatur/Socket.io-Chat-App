@@ -29,7 +29,7 @@ function App() {
         if(data.name)
         {
           setName(data.name)
-          navigator('/chat');
+          navigator('/Socket.io-Chat-App/chat');
         }
       }
   }
@@ -43,9 +43,9 @@ function App() {
   return (
     <div className='bg-gray-700 h-screen'>
       <Routes>
-        <Route path='/' element={<MainPage />} />
-        <Route path='/set' element={<Set extractName={getName} />} />
-        <Route path='/chat' element={<Chat name={name} />} />
+        <Route path='/Socket.io-Chat-App' element={<MainPage />} />
+        <Route path='/Socket.io-Chat-App/set' element={<Set extractName={getName} />} />
+        <Route path='/Socket.io-Chat-App/chat' element={<Chat name={name} />} />
       </Routes>
     </div>
   );

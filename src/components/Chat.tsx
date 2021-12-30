@@ -64,7 +64,7 @@ export default function Chat({name}:ChatProps) {
     
     const deleteTokenAndGoBack = () => {
         removeCookie('token');
-        navigator('/');
+        navigator('/Socket.io-Chat-App');
     }
     const handleKeyDown = (e:KeyboardEvent) => {
         if(e.key === 'Enter')
