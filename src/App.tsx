@@ -18,7 +18,7 @@ function App() {
   const validateCookie = async() => {
       if(cookies.token)
       {
-        const response = await fetch('http://localhost:3004/auth', {
+        const response = await fetch('https://hechatapp.herokuapp.com/auth', {
               headers: {
                   'Authorization': cookies.token,
                   'Content-Type': 'application/json'

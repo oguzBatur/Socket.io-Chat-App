@@ -24,7 +24,7 @@ export default function Set({extractName}:SetProps) {
         extractName(name);
         if(name.replace(/\s/g,'') !== ""){
 
-            const response = await fetch('http://localhost:3004/setUser', {
+            const response = await fetch('https://hechatapp.herokuapp.com/setUser', {
                 method: 'POST',
                 body:JSON.stringify({name:name}),
                 headers:{

@@ -12,7 +12,7 @@ interface ChatStates{
 }
 
 
-const CONNECTION_PORT = 'localhost:3004';
+const CONNECTION_PORT = `https://hechatapp.herokuapp.com/`;
 let socket: Socket<DefaultEventsMap, DefaultEventsMap>;
 
 export default function Chat({name}:ChatProps) {
