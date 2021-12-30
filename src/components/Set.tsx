@@ -54,7 +54,7 @@ export default function Set({extractName}:SetProps) {
     }
     return (
         <>
-            <Link className='font-bold absolute right-0 text-white m-1 py-2 px-12 bg-green-400 cursor-pointer rounded-sm ' to={'/'}>
+            <Link className='font-bold absolute right-0 text-white m-1 py-2 px-12 bg-green-400 cursor-pointer rounded-sm ' to={'/Socket.io-Chat-App'}>
                 Go Back
             </Link>
             <form className='h-full sm:w-1/3 m-auto flex flex-col items-center justify-center gap-3 text-white text-center '>
